@@ -13,7 +13,7 @@
             <slot></slot>
         </label>
 
-        <div v-if="errorMessages" class="material-errors">
+        <div v-if="errorMessages" class="material-errors mt-1">
             <div v-for="error in computedErrors" :key="error" class="material-error">
                 {{ error }}
             </div>
@@ -187,7 +187,6 @@
         font-weight: $font-weight-normal;
         position: absolute;
         pointer-events: none;
-        left: 0;
         top: $spacer;
         transition: $transition;
       }
