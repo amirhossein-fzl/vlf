@@ -9,8 +9,9 @@
   outline: none;
 }
 
-input {
+input, textarea {
     font-family: 'sans-md';
+    font-size: 14px !important;
 }
 
 @font-face {
@@ -1023,6 +1024,7 @@ a {
 .post-body p {
     text-align: justify;
     margin: 15px 0;
+    line-height: 40px;
 }
 
 .post-body h2 {
@@ -1134,6 +1136,49 @@ a {
 
 .login-body h2 {
     text-align: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    background-color: transparent;
+}
+
+.inp {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.input, textarea {
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #333;
+}
+
+input[type="email"], input[type="password"] {
+    direction: ltr;
+}
+
+.input:focus, textarea:focus {
+    border: 1px solid #0096c7;
+    transition: border-color .25s ease-in-out;
+
+}
+
+textarea {
+    resize: vertical;
+    padding: 10px;
+}
+
+.contact-text {
+    line-height: 25px !important;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 768px) {

@@ -6,6 +6,7 @@
         <input v-if="type === 'password'" type="password" class="material-input" :name="name" :id="id" :placeholder="placeholder" v-model="valueCopy" :readonly="readonly" :disabled="disabled" :autocomplete="autocomplete" :max="max" :min="min" :step="step" :required="required" @focus="handleFocus(true)" @blur="handleFocus(false)" @input="handleModelInput" />
         <input v-if="type === 'tel'" type="tel" class="material-input" :name="name" :id="id" :placeholder="placeholder" v-model="valueCopy" :readonly="readonly" :disabled="disabled" :autocomplete="autocomplete" :required="required" @focus="handleFocus(true)" @blur="handleFocus(false)" @input="handleModelInput" />
         <input v-if="type === 'text'" type="text" class="material-input" :name="name" :id="id" :placeholder="placeholder" v-model="valueCopy" :readonly="readonly" :disabled="disabled" :autocomplete="autocomplete" :minlength="minlength" :maxlength="maxlength" :required="required" @focus="handleFocus(true)" @blur="handleFocus(false)" @input="handleModelInput" />
+        <textarea v-if="type === 'textarea'" rows="5" class="material-input" :name="name" :id="id" :placeholder="placeholder" v-model="valueCopy" :readonly="readonly" :disabled="disabled" :required="required" @focus="handleFocus(true)" @blur="handleFocus(false)" @input="handleModelInput"></textarea>
 
         <span class="material-input-bar"></span>
 
@@ -48,6 +49,7 @@
                 valid: true,
             };
         },
+        emits: ["update:valueCopy"],
         beforeMount() {
             // Here we are following the Vue2 convention on custom v-model:
             // https://github.com/vuejs/vue/issues/2873#issuecomment-223759341
@@ -55,7 +57,7 @@
         },
         methods: {
             handleModelInput(event) {
-                this.$emit("input", event.target.value, event);
+                this.$emit('update:valueCopy', event.target.value);
                 this.handleValidation();
             },
             handleFocus(focused) {

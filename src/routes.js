@@ -3,6 +3,7 @@ import Home from './pages/home.vue';
 import PostSingle from "./pages/post-single.vue";
 import Register from "./pages/auth/register.vue";
 import About from "./pages/about.vue";
+import Contact from "./pages/contact.vue";
 
 let routes = [
     {
@@ -24,6 +25,11 @@ let routes = [
         path: '/about',
         name: 'about',
         component: About
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: Contact
     },
 ];
 
