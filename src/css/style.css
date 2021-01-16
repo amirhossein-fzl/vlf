@@ -1203,6 +1203,24 @@ textarea {
     font-size: 14px;
 }
 
+.teacher-name {
+    font-size: 20px;
+}
+
+.teacher-avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.teacher-info {
+    font-size: 15px;
+}
+
+.teacher-info span:nth-child(1) {
+    font-size: 18px;
+}
+
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
