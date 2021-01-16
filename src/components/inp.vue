@@ -1,8 +1,12 @@
 <template>
     <div class="inp">
         <label :for="id" v-text="label"></label>
-        <input :type="type" v-if="!textarea" :class="['input', {'invalid-value': isInvalid}]" :id="id" :placeholder="placeholder" :value="modelValue" @input="handleModel">
-        <textarea :id="id" v-else :class="{'invalid-value': isInvalid}" :rows="tarops.rows" :value="modelValue" @input="handleModel"></textarea>
+        <div :class="['input-box', {'focused': focus}]">
+            <i :class="[icon, 'ml-1']" v-if="iconAlign === 'right'"></i>
+            <input :type="type" v-if="!textarea" :class="['input', {'invalid-value': isInvalid}]" :required="required" :id="id" :placeholder="placeholder" :value="modelValue" @input="handleModel" @focus="focus = true" @blur="focus = !focus">
+            <textarea :id="id" v-else :class="{'invalid-value': isInvalid}" :required="required" :rows="tarops.rows" :value="modelValue" @input="handleModel"></textarea>
+            <i :class="[icon, 'mr-1']" v-if="iconAlign === 'left'"></i>
+        </div>
     </div>
 </template>
 
@@ -12,7 +16,8 @@
         emits: ['update:modelValue'],
         data() {
             return {
-                isInvalid: false
+                isInvalid: false,
+                focus: false,
             };
         },
         methods: {
@@ -55,6 +60,17 @@
                 type: String,
                 default: undefined
             },
+            required: {
+                default: false,
+                type: Boolean
+            },
+            icon: {
+                type: String
+            },
+            iconAlign: {
+                type: String,
+                default: "right"
+            }
         }
     };
 </script>

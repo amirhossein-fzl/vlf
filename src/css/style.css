@@ -1147,28 +1147,50 @@ input:-webkit-autofill:focus {
 .inp {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-label {
-    font-size: 15px;
-    margin-bottom: 10px;
+.inp input {
+    width: 100%;
 }
 
-.input, textarea {
+.input-box {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
     border: 1px solid #d4d4d4;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 6px 8px;
     color: #333;
 }
 
-input[type="email"], input[type="password"] {
+label {
+    font-size: 14.5px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.input, textarea {
+    border: none;
+}
+
+input[type="email"], input[type="password"], input[id="username"] {
     direction: ltr;
 }
 
-.input:focus, textarea:focus {
+input[type="password"] {
+    font-weight: 900;
+}
+
+.focused {
     border: 1px solid #0096c7;
     transition: border-color .25s ease-in-out;
 
+}
+
+.focused i {
+    color: #0096c7;
+    transition: border-color .25s ease-in-out;
 }
 
 textarea {
