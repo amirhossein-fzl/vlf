@@ -6,6 +6,7 @@ import About from "./pages/about.vue";
 import Contact from "./pages/contact.vue";
 import Login from "./pages/auth/login.vue";
 import TeacherPage from "./pages/teacher-page.vue";
+import CoursePage from "./pages/course-page.vue";
 
 let routes = [
     {
@@ -42,6 +43,11 @@ let routes = [
         path: '/teacher/:teacher',
         name: 'teacherPage',
         component: TeacherPage
+    },
+    {
+        path: '/course/:course',
+        name: 'courcePage',
+        component: CoursePage
     },
 ];
 
