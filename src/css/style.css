@@ -1350,6 +1350,73 @@ textarea {
     font-size: 14px;
 }
 
+.video-container {
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(6, 69, 245, 0.23);
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.video-container:nth-child(1) {
+    margin-top: 0;
+}
+
+.video-container .video-info li h3, .video-container .video-info li span, .video-container .video-info li .badge {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.video-container .video-info li h3 {
+    font-family: sans-md;
+}
+
+.video-container ul[class="video-info"], .video-container ul[class="video-operation"] {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.video-container ul[class="video-info"] li:nth-child(1) {
+    padding-right: 0;
+    border-right: none;
+}
+
+.video-container ul[class="video-info"] li {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #ababab;
+}
+
+.video-container .badge {
+    color: #0089ff;
+    font-weight: bold !important;
+}
+
+.video-container .video-operation button:nth-child(3) {
+    margin-left: 0;
+}
+
+.video-container .video-operation button {
+    border-radius: 50%;
+    border: 1px solid #ef476f;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.course-vid-description {
+    overflow: hidden;
+    transition: all 400ms ease 0s;
+    font-size: 14px;
+}
+
 @media only screen and (max-width: 768px) {
     .container {
         width: 90%;
