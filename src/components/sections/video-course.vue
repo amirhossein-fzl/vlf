@@ -8,7 +8,7 @@
             </ul>
             <div class="video-operation">
                 <btn-dang-flat @click="expand()"><i :class="['fad', 'fa-chevron-down', {'fa-rotate-180':isexpand}]" style="transition: all 400ms ease 0s"></i></btn-dang-flat>
-                <btn-dang-flat><i class="fad fa-play"></i></btn-dang-flat>
+                <btn-dang-flat @click="scrollToVideo()"><i class="fad fa-play"></i></btn-dang-flat>
                 <btn-dang-flat><i class="fad fa-arrow-to-bottom"></i></btn-dang-flat>
             </div>
         </div>
@@ -36,6 +36,9 @@
             expand() {
                 this.isexpand = !this.isexpand;
                 this.height = this.isexpand ? "auto" : "0px";
+            },
+            scrollToVideo() {
+                document.getElementsByClassName("plyr")[0].previousSibling.scrollIntoView({ behavior: 'smooth', block: 'start' });
             },
         },
         watch: {
