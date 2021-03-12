@@ -1,10 +1,10 @@
 <template>
     <div class="inp">
         <label :for="id" v-text="label"></label>
-        <div :class="['input-box', {'focused': focus}]">
+        <div :class="[{'focused': focus},'input-box']">
             <i :class="[icon, 'ml-1']" v-if="iconAlign === 'right'"></i>
-            <input :type="type" v-if="!textarea" :class="['input', {'invalid-value': isInvalid}]" :required="required" :id="id" :placeholder="placeholder" :value="modelValue" @input="handleModel" @focus="focus = true" @blur="focus = !focus">
-            <textarea :id="id" v-else :class="{'invalid-value': isInvalid}" :required="required" :rows="tarops.rows" :value="modelValue" @input="handleModel"></textarea>
+            <input :type="type" v-if="!textarea" :class="['input', {'invalid-value': isInvalid}]" v-bind="$props" :required="required" :id="id" :placeholder="placeholder" :value="modelValue" @input="handleModel" @focus="focus = true" @blur="focus = !focus">
+            <textarea :id="id" v-else :class="{'invalid-value': isInvalid}" v-bind="$props" :required="required" :rows="tarops.rows" :value="modelValue" @input="handleModel"></textarea>
             <i :class="[icon, 'mr-1']" v-if="iconAlign === 'left'"></i>
         </div>
     </div>
@@ -56,10 +56,7 @@
                 type: RegExp,
                 required: false
             },
-            modelValue: {
-                type: String,
-                default: undefined
-            },
+            modelValue: {},
             required: {
                 default: false,
                 type: Boolean

@@ -1,6 +1,6 @@
 <template>
-    <div class="breadcrumb">
-        <ul>
+    <!-- <div class="breadcrumb"> -->
+        <ul class="breadcrumb">
             <template v-for="item in items" :key="item.title">
                 <li>
                     <a :href="item.link" v-text="item.title"></a>
@@ -8,7 +8,7 @@
             </template>
             <li class="active" v-text="active"></li>
         </ul>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>

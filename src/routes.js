@@ -7,6 +7,7 @@ import Contact from "./pages/contact.vue";
 import Login from "./pages/auth/login.vue";
 import TeacherPage from "./pages/teacher-page.vue";
 import CoursePage from "./pages/course-page.vue";
+import Category from "./pages/category.vue";
 
 let routes = [
     {
@@ -48,6 +49,11 @@ let routes = [
         path: '/course/:course',
         name: 'courcePage',
         component: CoursePage
+    },
+    {
+        path: '/category/:category',
+        name: 'category',
+        component: Category
     },
 ];
 
