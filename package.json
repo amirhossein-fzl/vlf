@@ -18,7 +18,7 @@
         "swiper": "^6.3.5",
         "vue": "^3.0.0",
         "vue-plyr": "^7.0.0",
-        "vue-ripple-directive": "^2.0.1",
+        "vue-ripple-directive": "PygmySlowLoris/vue-ripple-directive#pull/33/head",
         "vue-router": "^4.0.0-rc.3",
         "vue-scroll-progress": "^1.1.5",
         "vue-star-rating": "^2.1.0",
