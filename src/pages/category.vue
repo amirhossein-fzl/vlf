@@ -8,7 +8,7 @@
             <div class="side-card mt-5 cat-box">
                 <div class="search-group-cat">
                     <input type="text" placeholder="جست و جو ..." />
-                    <button><i class="far fa-search"></i></button>
+                    <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
 
@@ -45,6 +45,15 @@
                     <course-card title="تحلیل و پیش بینی بورس در پایتون" :teacher="{ name: 'میلاد محمدی', link: '#' }" :image="require('../assets/img/products/Stock-analysis.png')" link="#" price="750,000" lenght="58:36 ساعت" :special="true"></course-card>
                 </div>
             </div>
+            <div class="row mt-5">
+                <ul class="pagination mx-auto">
+                    <li class="item"><a href="#">&lt;</a></li>
+                    <li class="item active"><a href="#">1</a></li>
+                    <li class="item"><a href="#">2</a></li>
+                    <li class="item"><a href="#">3</a></li>
+                    <li class="item"><a href="#">&gt;</a></li>
+                </ul>
+            </div>
         </div>
         <Footer />
     </div>
@@ -75,9 +84,8 @@
                         link: "#",
                     },
                 ],
-                options: ["Batman", "Robin", "Joker"],
-                // value: '',
             };
         },
     };
 </script>
+

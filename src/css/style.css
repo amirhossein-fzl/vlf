@@ -1423,17 +1423,68 @@ textarea {
 
 .search-group-cat {
     display: flex;
-    border: 1px solid #000;
+    border: 1px solid #4361ee;
+    border-radius: 6px;
+    width: fit-content;
 }
 
 .search-group-cat button {
     border: none;
     background-color: transparent;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4361ee;
 }
 
 .search-group-cat input {
     border: none;
     padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+}
+
+.pagination .item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4361ee;
+    color: #4361ee;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: baseline;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 14px;
+    transition: .5s;
+}
+
+.pagination .item:hover {
+    background-color: #4361ee;
+}
+
+.pagination .item:hover a {
+    color: #fff;
+}
+
+.pagination .item a {
+    text-decoration: none;
+    color: #4361ee;
+}
+
+.pagination .item.active {
+    background-color: #4361ee;
+}
+
+.pagination .item.active a {
+    color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
